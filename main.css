@@ -1,0 +1,10 @@
+header{
+    background-color:lightgray;
+    border: solid 1px black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}

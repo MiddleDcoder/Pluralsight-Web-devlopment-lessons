@@ -29,7 +29,7 @@ footer{
 
 .simple-form{
     padding: 2px;
-    
+    width:300px;
 }
 
 .simple-form  label{
@@ -49,4 +49,9 @@ footer{
     border-radius: 15px;
     padding: 3px;
     margin-top: 5px;
+}
+
+.container{
+    width:989px;
+    margin: 0 auto;
 }

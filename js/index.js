@@ -9,6 +9,7 @@
         var resultsDiv = document.getElementById("results");
         resultsDiv.innerHTML = "<p> This is from Javascript </p>";
 
+        //showing what type of data it.
         console.log("msg is "+ typeof(msg));
         console.log("resultsDiv is "+ typeof(resultsDiv));
 
@@ -34,3 +35,38 @@
        if (aNumber === "10"){
         console.log("10 is 10");
     }
+
+    /* function showMsg(msg){
+        console.log("showMsg: " + msg);
+    }  */
+
+ // function and conditional 
+
+    function showMsg(msg, more){
+        if (more){
+            console.log("showMsg+ " + msg + more);
+        }else{
+            console.log("showMsg+ " + msg);
+        }
+    }
+
+    showMsg("some information");
+    showMsg("more information", "and even more");
+
+
+    // variable type function
+    var showIt = function (msg) {
+        console.log(msg);
+    }
+
+    showIt("Some message");
+
+    function showItThen(msg, callback){
+        showIt(msg);
+        callback();
+    }
+    
+    showItThen("showItThen called", function(){
+        console.log("callback called");
+    })
+

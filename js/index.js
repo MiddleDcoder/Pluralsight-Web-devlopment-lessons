@@ -12,7 +12,47 @@
 
     //Objects and Arrays
 
-    var result = {
+
+
+    //console.log(result.phoneNumber);
+
+
+    // Arrays 
+
+    var results = [{
+        name: "jQuery",
+        language: "Javascript",
+        score: 4.5,
+        showLog: function () {
+            
+        },
+        owner: {
+            login: " jhunlorenz",
+            id: 2000108328 
+        }
+    }, {
+        name: "jQuery UI",
+        language: "Javascript",
+        score: 3.5,
+        showLog: function () {
+            
+        },
+        owner: {
+            login: " jhunlorenz",
+            id: 2000108328 
+        }
+    }
+];
+
+console.log(results.length);
+console.log(results[0].name);
+
+    // results.push(result);
+    // results.push({
+    //     name: "dummy project"
+    // });
+
+    /*     var result = {
         name: "jQuery",
         language: "Javascript",
         score: 4.5,
@@ -25,9 +65,8 @@
         }
     };
 
-    result.phoneNumber = "123-456-7890"
-
-    console.log(result.phoneNumber);
+    result.phoneNumber = "123-456-7890" 
+    */
 
 
      /*

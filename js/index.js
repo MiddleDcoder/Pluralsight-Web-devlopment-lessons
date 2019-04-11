@@ -80,9 +80,16 @@
 
         var someMsg = "some Message";
         console.log("testMe(); " + someMsg);
+
+        showItThen("with Closure", function (){
+        showIt("testMe With Closure(); " + someMsg);
+        });
+
     }
 
     //this idea is not gonna work
     //console.log("global: " + someMsg);
     
     testMe();
+
+    //Closures  

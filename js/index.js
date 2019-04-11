@@ -44,8 +44,28 @@
     }
 ];
 
-console.log(results.length);
-console.log(results[0].name);
+// console.log(results.length);
+// console.log(results[0].name);
+
+//Looping an array 
+// for (var x = 0; x < results.length; x++){
+//     var result = results[x];
+//     console.log(result.name);
+// }
+
+// for (var x = 0; x < results.length; x++){
+//     var result = results[x];
+//     if (result.score < 4) break;
+//     console.log(result.name);
+// }
+
+for (var x = 0; x < results.length; x++){
+    var result = results[x];
+    if (result.score > 4) continue;
+    console.log(result.name);
+}
+
+
 
     // results.push(result);
     // results.push({

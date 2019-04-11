@@ -9,6 +9,28 @@
         var resultsDiv = document.getElementById("results");
         resultsDiv.innerHTML = "<p> This is from Javascript </p>";
 
+
+    //Objects and Arrays
+
+    var result = {
+        name: "jQuery",
+        language: "Javascript",
+        score: 4.5,
+        showLog: function () {
+            
+        },
+        owner: {
+            login: " jhunlorenz",
+            id: 2000108328 
+        }
+    };
+
+    result.phoneNumber = "123-456-7890"
+
+    console.log(result.phoneNumber);
+
+
+     /*
         //showing what type of data it.
         console.log("msg is "+ typeof(msg));
         console.log("resultsDiv is "+ typeof(resultsDiv));
@@ -39,6 +61,8 @@
     /* function showMsg(msg){
         console.log("showMsg: " + msg);
     }  */
+
+    /*
 
  // function and conditional 
 
@@ -92,4 +116,6 @@
     
     testMe();
 
-    //Closures  
+    //Closures  are about with scopes lessons
+*/
+    

@@ -60,7 +60,7 @@
     }
 
     showIt("Some message");
-
+//callback example
     function showItThen(msg, callback){
         showIt(msg);
         callback();
@@ -70,3 +70,19 @@
         console.log("callback called");
     })
 
+
+    //scope lessons
+
+    var inGlobal = true;
+
+    function testMe() {
+        console.log("testMe(): " + inGlobal);
+
+        var someMsg = "some Message";
+        console.log("testMe(); " + someMsg);
+    }
+
+    //this idea is not gonna work
+    //console.log("global: " + someMsg);
+    
+    testMe();

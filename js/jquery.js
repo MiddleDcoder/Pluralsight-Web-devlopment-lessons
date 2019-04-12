@@ -45,8 +45,9 @@ if(searchPhrase){
     resultlist.text("Performing search...");
 
 var gitHubSearch = "https://api.github.com/search/repositories?q=" + searchPhrase;
-
+// encondeURIComponent(searchPhrase);
 if(langChoice != "ALL" ){
+    //gitHubSearch += "+language:" + encondeURIComponent(langChoice);
     gitHubSearch += "+language:" + langChoice;
 }
 

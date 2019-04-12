@@ -31,18 +31,56 @@ var listItems = $("header nav li").css("font-weight", "bold");
 // $("header nav li:first").css("font-size", "18px");
 
 listItems.filter(":first").css("font-size", "18px");
+  
+
+//jQuery working with forms
+$("#gitHubSearchForm").on("submit", function (){
+
+var searchPhrase = $("#searchPhrase").val();
+var useStars = $("#useStars").val();
+var langChoice = $("#langChoice").val();
+
+if(searchPhrase){
+
+    resultlist.text("Performing search...");
+
+var gitHubSearch = "https://api.github.com/search/repositories?q=" + searchPhrase;
+
+if(langChoice != "ALL" ){
+    gitHubSearch += "+language:" + langChoice;
+}
+
+if(useStars){
+    gitHubSearch += "&sort=starts";
+}
+
+var gitHubSearch = "https://api.github.com/search/repositories?q=jquery+language:javascript&sort=starts";
+
+
+$.get(gitHubSearch, function (r){
+  console.log(r.items.length)
+   displayResults(r.items);
+});
+
+                }
+
+    return false;
+
+});
 
 
 
 //Networking with jQuery
+// for offline
+/*var gitHubSearch = "http://127.0.0.1:5500/js/repositories.json"; */
 
-var githubSearch = "https://api.github.com/search/repositories?q=jquery+language:javascript$sort=starts";
+// var githubSearch = "https://api.github.com/search/repositories?q=jquery+language:javascript$sort=starts";
 
 
-$.get(githubSearch, function (r){
-  console.log(r.items.length)
-   displayResults(r.items);
-});
+// $.get(githubSearch, function (r){
+//   console.log(r.items.length)
+//    displayResults(r.items);
+// });
 
 // //promise sysntax this is for lower version of jQuery try to study what function to use in new jQuery
 // $.get(githubSearch)

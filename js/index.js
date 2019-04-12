@@ -59,11 +59,11 @@
 //     console.log(result.name);
 // }
 
-for (var x = 0; x < results.length; x++){
-    var result = results[x];
-    if (result.score > 4) continue;
-    console.log(result.name);
-}
+// for (var x = 0; x < results.length; x++){
+//     var result = results[x];
+//     if (result.score > 4) continue;
+//     console.log(result.name);
+// }
 
 
 

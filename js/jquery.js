@@ -11,6 +11,24 @@
 
 //but you can try $ dollar sign for shorter calling the jquery object
 
+//innerHTML is for javascript
+// html or text is for jQuery
+
+//Test Jquery
+var testClick = $("#testDiv");
+testClick.html("This is a Clicked Test");
+
+var toggleAnchorTest = $(".clickMe");
+toggleAnchorTest.on("click", function(){
+    testClick.toggle(500);
+
+    if(toggleAnchorTest.text() == "Click Me") toggleAnchorTest.text("Clicked Anchor Test");
+    else toggleAnchorTest.text("Click Me");
+
+});
+
+
+
 var resultlist = $("#resultlist");
 resultlist.text("this is from jQuery");
 
@@ -19,14 +37,16 @@ toggleButton.on("click", function () {
 resultlist.toggle(500);
 
 if (toggleButton.text() == "Hide") toggleButton.text("Show");
-else toggleButton.text("Hide")
+else toggleButton.text("Hide");
 
 });
 
 
 // for navigation
-
-var listItems = $("header nav li").css("font-weight", "bold");
+// var listItems = $("header nav li").text("Testing jQuery");
+// var listItems = $("header nav li").css("font-weight", "bold");
+var listItems = $("header nav li");
+listItems.css("font-weight", "bold");
 
 // $("header nav li:first").css("font-size", "18px");
 
@@ -44,11 +64,12 @@ if(searchPhrase){
 
     resultlist.text("Performing search...");
 
-var gitHubSearch = "https://api.github.com/search/repositories?q=" + searchPhrase;
+var gitHubSearch = "https://api.github.com/search/repositories?q=" + encondeURIComponent(searchPhrase);
+// searchPhrase;
 // encondeURIComponent(searchPhrase);
 if(langChoice != "ALL" ){
-    //gitHubSearch += "+language:" + encondeURIComponent(langChoice);
-    gitHubSearch += "+language:" + langChoice;
+    gitHubSearch += "+language:" + encondeURIComponent(langChoice);
+    // gitHubSearch += "+language:" + langChoice;
 }
 
 if(useStars){
@@ -59,7 +80,7 @@ var gitHubSearch = "https://api.github.com/search/repositories?q=jquery+language
 
 
 $.get(gitHubSearch, function (r){
-  console.log(r.items.length)
+  console.log(r.items.length);
    displayResults(r.items);
 });
 

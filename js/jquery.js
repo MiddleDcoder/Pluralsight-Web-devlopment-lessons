@@ -18,7 +18,7 @@
 var testClick = $("#testDiv");
 testClick.html("This is a Clicked Test");
 
-var toggleAnchorTest = $(".clickMe");
+var toggleAnchorTest = $("#clickMe");
 toggleAnchorTest.on("click", function(){
     testClick.toggle(500);
 

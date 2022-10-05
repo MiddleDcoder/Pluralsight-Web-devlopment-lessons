@@ -64,12 +64,11 @@ if(searchPhrase){
 
     resultlist.text("Performing search...");
 
-var gitHubSearch = "https://api.github.com/search/repositories?q=" + encondeURIComponent(searchPhrase);
-// searchPhrase;
+var gitHubSearch = "https://api.github.com/search/repositories?q=" + searchPhrase;
 // encondeURIComponent(searchPhrase);
 if(langChoice != "ALL" ){
-    gitHubSearch += "+language:" + encondeURIComponent(langChoice);
-    // gitHubSearch += "+language:" + langChoice;
+    //gitHubSearch += "+language:" + encondeURIComponent(langChoice);
+    gitHubSearch += "+language:" + langChoice;
 }
 
 if(useStars){
@@ -80,7 +79,7 @@ var gitHubSearch = "https://api.github.com/search/repositories?q=jquery+language
 
 
 $.get(gitHubSearch, function (r){
-  console.log(r.items.length);
+  console.log(r.items.length)
    displayResults(r.items);
 });
 
